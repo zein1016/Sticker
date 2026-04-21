@@ -133,7 +133,7 @@ float stickerPattern(int option, float2 uv, float scale) {
     half b = half(contrast + 0.25 * sin((uv.x + uv.y) * 10.0 - gradientNoise));
 
     half4 foilColor = half4(r, g, b, 1.0);
-    half4 mixedFoilColor = lightnessMix(color, foilColor, intensity, 0.3);
+    half4 mixedFoilColor = lightnessMix(color, foilColor, intensity, 0.0);
 
     half4 checkerFoil = increaseContrast(mixedFoilColor, pattern, checkerIntensity);
     half4 noiseCheckerFoil = increaseContrast(checkerFoil, noise, noiseIntensity);
